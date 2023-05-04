@@ -21,7 +21,7 @@ function Profileuser() {
     let { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:4000/users/getmyuser/${id}`)
+        fetch(`https://social-mgcw.onrender.com/users/getmyuser/${id}`)
             .then(res => res.json())
             .then(value => setuser(value))
             .catch(err => console.log(err))
@@ -32,7 +32,7 @@ function Profileuser() {
         file.img = URL.createObjectURL(file)
         let formData = new FormData();
         formData.append('avatar', file);
-        fetch(`http://localhost:4000/users/addavatar/${user._id}`, {
+        fetch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, {
             method: 'PATCH',
             credentials: 'include',
             body: formData,
@@ -48,7 +48,7 @@ function Profileuser() {
         file.img = URL.createObjectURL(file)
         let formData = new FormData();
         formData.append('backgorund', file);
-        fetch(`http://localhost:4000/users/addback/${user._id}`, {
+        fetch(`https://social-mgcw.onrender.com/users/addback/${user._id}`, {
             method: 'PATCH',
             credentials: 'include',
             body: formData,
@@ -63,7 +63,7 @@ function Profileuser() {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://social-mgcw.onrender.com/post/${id}`)
             .then(res => res.json())
             .then(value => setyourposts(value))
             .catch(err => console.log(err))
@@ -75,7 +75,7 @@ function Profileuser() {
         <input type='file' onChange={handlebackground} style={{ display: 'none' }} id='addbackground' />
         <div className={cx('container-profike')} >
             <div className={cx('wrap-backround')} >
-                {user.backgorund ? <img className={cx('background')} alt='background' src={`http://localhost:4000/${user.backgorund}`} />
+                {user.backgorund ? <img className={cx('background')} alt='background' src={`https://social-mgcw.onrender.com/${user.backgorund}`} />
                     : <img className={cx('background')} alt='background' src={backgroun} />}
                 <div>
                     <label htmlFor='addbackground' className={cx('changbackgoround')}><p>Backgorund</p></label>

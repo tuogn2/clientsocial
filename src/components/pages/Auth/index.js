@@ -35,7 +35,7 @@ function Authe() {
         const emailValue = email; // get email value from state
         const passValue = pass; // get password value from state
 
-        fetch(`http://localhost:4000/users/login`, {
+        fetch(`https://social-mgcw.onrender.com/users/login`, {
             method: 'post',
             credentials: 'include',
             headers: {

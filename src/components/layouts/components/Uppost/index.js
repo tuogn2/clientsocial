@@ -29,7 +29,7 @@ function Uppost() {
     const handleShow = () => setShow(true);
 
     useEffect(() => {
-        fetch(`http://localhost:4000/users/getmyuser/${localStorage.id}`)
+        fetch(`https://social-mgcw.onrender.com/users/getmyuser/${localStorage.id}`)
             .then(res => res.json())
             .then(user => {
                 if (user.email) {
@@ -65,7 +65,7 @@ function Uppost() {
         }
         formData.append('text', content);
         formData.append('user', infor._id);
-        fetch(`http://localhost:4000/post`, {
+        fetch(`https://social-mgcw.onrender.com/post`, {
             method: 'post',
             credentials: 'include',
             // headers: {

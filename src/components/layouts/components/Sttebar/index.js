@@ -23,7 +23,7 @@ function Sitebar() {
 
 
     useEffect(() => {
-        fetch(`http://localhost:4000/users/getmyuser/${localStorage.id}`)
+        fetch(`https://social-mgcw.onrender.com/users/getmyuser/${localStorage.id}`)
             .then(res => res.json())
             .then(user => {
                 if (user.email) {
@@ -93,7 +93,7 @@ function Sitebar() {
                 <Option icon={<FontAwesomeIcon icon={faHome} style={{ height: 20, width: 20, color: "#1b7eee" }} />} title={`Trang chủ`} />
                 <Button to={`profile/${infor._id}`}>
                     <div className={cx('wrap-option')}>
-                        {checkimg ? <img className={cx('avt')} alt='avt' src={`http://localhost:4000//${infor.avatar}`} /> : <img className={cx('avt')} alt='avt' src={avt} />}
+                        {checkimg ? <img className={cx('avt')} alt='avt' src={`https://social-mgcw.onrender.com/${infor.avatar}`} /> : <img className={cx('avt')} alt='avt' src={avt} />}
                         <div>{infor.name}</div>
                     </div>
                 </Button>

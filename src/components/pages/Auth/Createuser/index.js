@@ -57,7 +57,7 @@ function Createuser() {
         }
 
 
-            fetch(`http://localhost:4000/users`, {
+            fetch(`https://social-mgcw.onrender.com/users`, {
                 method: 'post',
                 credentials: 'include',
                 headers: {

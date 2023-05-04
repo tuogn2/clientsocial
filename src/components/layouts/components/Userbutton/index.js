@@ -16,7 +16,7 @@ function Userbutton({ user }) {
     
     return (<>
         <div className={cx('container-user')}>
-            {checkimg ? <img src={`http://localhost:4000/${user.avatar}`} alt='avt' /> : <img src={avt} alt='avt' />}
+            {checkimg ? <img src={`https://social-mgcw.onrender.com/${user.avatar}`} alt='avt' /> : <img src={avt} alt='avt' />}
             <p>
                 <b>
                     {user.name}
