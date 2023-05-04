@@ -1,0 +1,22 @@
+.avt{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: brightness(100%);
+    &:hover{
+    filter: brightness(120%);
+
+    }
+}
+
+.sizesm{
+    height: 25px;
+    width: 25px;
+}
+
+.sizebig{
+    height: 168px !important;
+    width: 168px !important;
+    border: 3px solid rgb(142, 81, 81); 
+}

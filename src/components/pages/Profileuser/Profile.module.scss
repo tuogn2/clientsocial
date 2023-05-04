@@ -1,0 +1,239 @@
+.container-profike {
+    width: 100%;
+    height: 90%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // margin: 0 166px;
+    position: relative;
+    z-index: 1;
+
+}
+
+
+
+.wrap-backround {
+    width: 100%;
+    height: 330px;
+
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+}
+
+
+.background {
+    height: 330px;
+    width: 80%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid rgb(142, 81, 81);
+
+}
+
+.changbackgoround {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    // right: 128px;
+    // top: 295px;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px black;
+    color: #13347a;
+    background: #11998e;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #71b1c6, #c2b8b8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: background-color 0.5s ease;
+
+    p {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #000000, #434343);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    &:hover {
+        background: linear-gradient(to right, #000000, #434343);
+
+        p {
+            background: linear-gradient(to right, #71b1c6, #c2b8b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+}
+
+
+.wrap-infor {
+    position: absolute;
+    top: 235px;
+    left: 180px;
+    z-index: 0;
+    display: flex;
+
+    img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+.upavt {
+    background-color: #3a3b3c;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: #525456;
+
+    }
+}
+
+
+.nameuser {
+    position: absolute;
+    width: 200px;
+    bottom: 21px;
+    right: -210px;
+    background: linear-gradient(to right, #71b1c6, #c2b8b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.wrapinfor {
+    background-color: #18191a;
+    border-top: 1px solid rgb(58 59 60);
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+///
+/// profile
+.wrap-contentuser {
+    // position: fixed;
+    background-color: #242526;
+    padding: 10px;
+    width: 400px;
+    height: 300px;
+    margin-right: 90px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.title-user {
+    background: linear-gradient(to right, #71b1c6, #c2b8b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+
+}
+
+
+.style-button {
+    width: 100%;
+    background-color: #3a3b3c;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    // padding: 10px 0;
+    h3 {
+        background: linear-gradient(to right, #71b1c6, #c2b8b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
+    &:hover {
+        background-color: #505153;
+
+        h3 {
+            background: linear-gradient(to right, #c2b8b8, #71b1c6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+    }
+}
+
+
+.style-home {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 100%;
+    margin: 10px 0;
+    div {
+        background: linear-gradient(to right, #71b1c6, #c2b8b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 10px;
+    }
+
+
+}
+
+.icon{
+    width: 20px;
+}
+
+.container-posts{
+    color: white;
+}
+
+
+//mobile width <740
+@media only screen and (max-width: 739px) {
+    .wrap-contentuser{
+        display: none;
+      }
+      .container-posts{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+//mt bangr
+@media only screen and (min-width:740px) and (max-width:1024px) {
+  .wrap-contentuser{
+    display: none;
+  }
+  .container-posts{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+}

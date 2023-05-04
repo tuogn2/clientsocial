@@ -1,0 +1,27 @@
+.container-user {
+    padding: 5px 13px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:hover {
+        background-color: rgb(73, 82, 82);
+
+    }
+
+    img {
+        height: 40px;
+        width: 40px;
+        margin-right: 5px;
+        border-radius: 50%;
+
+    }
+
+    p {
+        color: white;
+        margin: 0;
+        margin-left: 5px;
+        text-align: center;
+    }
+}

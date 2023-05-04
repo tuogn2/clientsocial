@@ -1,0 +1,19 @@
+.wrap-option{
+    color: white;
+}
+
+.wrap-option{
+    padding: 10px 10px;
+    border-radius: 5px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    div{
+        padding: 0 5px;
+        margin-left: 5px;
+    }
+    &:hover{
+        background-color: rgb(73, 82, 82);
+    }
+}

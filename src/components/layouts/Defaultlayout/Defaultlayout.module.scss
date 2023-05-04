@@ -1,0 +1,67 @@
+.wrap-body{
+    display: flex;
+    padding:  0 5px;
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-color: #18191a;
+ 
+}
+
+.sitebar-left{
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    
+}
+
+
+
+.center-content{
+    width: calc(100% - 300px - 280px);
+    height: 100%;
+    color: white ;
+    padding: 0 32px;
+    // display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+
+    
+}
+.sitebar-right{
+    background-color: #18191a;
+    width: 280px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+   
+}
+
+//mobile width <740
+@media only screen and (max-width: 739px) {
+    .sitebar-right{
+        display: none;
+      }
+      .center-content{
+        width: 100%;
+      }
+      .sitebar-left{
+        display: none;
+      }
+}
+
+//mt bangr
+@media only screen and (min-width:740px) and (max-width:1024px) {
+  .sitebar-right{
+    display: none;
+  }
+
+  .center-content{
+    width: calc(100% - 300px );
+  }
+}

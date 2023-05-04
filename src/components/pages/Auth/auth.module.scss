@@ -1,0 +1,145 @@
+.container {
+    height: 100%;
+    width: 100%;
+    // background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 132px;
+    padding-top: 92px;
+}
+
+
+
+
+/// anh
+/// 
+/// .container-pic
+
+.container-pic {
+    width: 160px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    border: 1px solid orange;
+    transition: 0.4s all ease;
+
+    &:hover{
+        box-shadow: 11px 1px 45px #ded5d5;
+    }
+    img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .userName{
+        // border-top: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    
+}
+
+.color{
+    color: blue;
+}
+
+
+.acounts{
+    margin-top: 20px;
+    display: flex;
+}
+
+
+.order{
+    margin: 0 40px;
+    
+    h1{
+        font-size: 60px;
+        color: blue;
+    }
+    h2{
+        font-size: 40px;
+    }
+}
+
+//submit
+
+.container-submit{
+    // box-shadow: 1px 1px 10px black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border: 1px solid rgb(151, 144, 144);
+    width: 477px;
+    height: 442px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.container-submit-form{
+    border-bottom: 1px solid rgb(151, 148, 148);
+    
+}
+
+.forgotpass{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+
+//container-create
+
+.container-create{
+    height: 77px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wrongpass{
+    border: 1px solid red;
+    color: rgb(203, 87, 87);
+}
+.wrongtitle{
+    color: rgb(203, 87, 87);
+
+}
+
+.bordertitle{
+    color: rgb(203, 87, 87);
+
+}
+
+
+//mobile width <740
+@media only screen and (max-width: 739px) {
+    .order{
+        display: none;
+      }
+    
+    
+}
+
+//mt bangr
+@media only screen and (min-width:740px) and (max-width:1024px) {
+  .order{
+    display: none;
+  }
+
+}
