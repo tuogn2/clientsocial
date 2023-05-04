@@ -11,12 +11,12 @@ function Userbutton({ user }) {
         if (!user.avatar) {
             setcheckimg(false)
         }
-    }, [])
+    }, [user.avatar])
 
     
     return (<>
         <div className={cx('container-user')}>
-            {checkimg ? <img src={`http://localhost:4000/${user.avatar}`} /> : <img src={avt} />}
+            {checkimg ? <img src={`http://localhost:4000/${user.avatar}`} alt='avt' /> : <img src={avt} alt='avt' />}
             <p>
                 <b>
                     {user.name}

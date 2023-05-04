@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import Search from './Search';
 import Profile from './Profile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faComment, faRing } from '@fortawesome/free-solid-svg-icons';
+import { faBell} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
 
 const cx = classNames.bind(style)

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 
 import classname from 'classnames/bind'
 import style from './Avatar.module.scss'
@@ -16,9 +15,9 @@ function Avatar({img,sizesm,sizebig}) {
     })
     if(img ===undefined){
         // setavatar(false)
-        return <img  className={classes} src={avt}/>;
+        return <img  className={classes} alt='avt ' src={avt}/>;
     }
-    return <img className={classes} src={`http://localhost:4000/${img}`}/>
+    return <img className={classes} alt='avt ' src={`http://localhost:4000/${img}`}/>
     
 }
 

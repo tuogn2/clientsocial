@@ -7,13 +7,14 @@ import { useEffect, useState } from "react";
 const cx = classname.bind(style)
 
 
-function Comment({ cmt,postid }) {
+function Comment({ cmt }) {
    const [user,setuser]= useState({});
    useEffect(()=>{
         fetch(`http://localhost:4000/users/getmyuser/${cmt.user}`)
         .then(res=>res.json())
         .then(value => setuser(value))
         .catch(err=>console.log(err))
+         // eslint-disable-next-line
    },[])
   
     return (

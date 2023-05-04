@@ -21,7 +21,7 @@ function Friendlist() {
             <div className="ms-3">
                 <h2 className="text-white mt-3"><b>Sinh nhật</b></h2>
                 <div className="border-bottom  text-white" style={{cursor: 'pointer'}}>
-                    <img src={gitf} />
+                    <img src={gitf} alt="gift"/>
                     Hôm nay sinh nhật mình
                 </div>
             </div>
@@ -40,7 +40,7 @@ function Friendlist() {
                         <Userbutton  user={user} />
                     </Button>)
                 }
-                return;
+                return<></>;
             })}
         </>);
 }

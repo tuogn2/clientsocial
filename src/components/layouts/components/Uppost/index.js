@@ -89,16 +89,16 @@ function Uppost() {
                 </div>
                 <div className={cx('wrap-options')}>
                     <div className={cx('costorm')}>
-                        <img src={camera} />
+                        <img src={camera} alt='cmr' />
                         <span>Video trực tuyến</span>
                     </div>
                     <div className={cx('costorm')}>
-                        <img src={image} />
+                        <img src={image} alt='img' />
                         <span>Ảnh/video</span>
 
                     </div>
                     <div className={cx('costorm')}>
-                        <img src={smile} />
+                        <img src={smile} alt='smile'/>
                         <span>Cảm xúc/hoạt động</span>
 
                     </div>
@@ -125,22 +125,22 @@ function Uppost() {
                         <div className={cx('wrap-textarea')}>
                             <textarea onChange={handercontent} placeholder={`${infor.name} Bạn đang nghĩ gì?`} />
                             {/* {upimg==''? <></>:<img src={upimg}/>} */}
-                            {upimg && <img className={cx('img-costom')} src={upimg.img} />}
+                            {upimg && <img className={cx('img-costom')} alt='up' src={upimg.img} />}
                         </div>
                         <div>
                             <label htmlFor='uploadfile'>
                                 <div className={cx('wrap-options')}>
                                     <div className={cx('costorm')}>
-                                        <img src={camera} />
+                                        <img src={camera} alt='cmr' />
                                         <span>Video trực tuyến</span>
                                     </div>
                                     <div className={cx('costorm')}>
-                                        <img src={image} />
+                                        <img src={image} alt='img' />
                                         <span>Ảnh/video</span>
 
                                     </div>
                                     <div className={cx('costorm')}>
-                                        <img src={smile} />
+                                        <img src={smile} alt='smile' />
                                         <span>Cảm xúc/hoạt động</span>
                                     </div>
                                 </div>

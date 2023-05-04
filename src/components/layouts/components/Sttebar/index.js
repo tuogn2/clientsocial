@@ -93,7 +93,7 @@ function Sitebar() {
                 <Option icon={<FontAwesomeIcon icon={faHome} style={{ height: 20, width: 20, color: "#1b7eee" }} />} title={`Trang chủ`} />
                 <Button to={`profile/${infor._id}`}>
                     <div className={cx('wrap-option')}>
-                        {checkimg ? <img className={cx('avt')} src={`http://localhost:4000//${infor.avatar}`} /> : <img className={cx('avt')} src={avt} />}
+                        {checkimg ? <img className={cx('avt')} alt='avt' src={`http://localhost:4000//${infor.avatar}`} /> : <img className={cx('avt')} alt='avt' src={avt} />}
                         <div>{infor.name}</div>
                     </div>
                 </Button>
@@ -107,7 +107,7 @@ function Sitebar() {
                 {groups.map((group ,index)=>{
                     return (
                         <div key={index} style={{cursor:'pointer'}} className={cx('wrap-option')}>
-                            <img className={cx('avt')} src={group.img}/>
+                            <img className={cx('avt')} alt='avt' src={group.img}/>
                             <div>
                                 {group.title}
                             </div>

@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind'
 import style from './Profile.module.scss'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Tippy from '@tippyjs/react/headless';
 
 import avt from '~/img/noavt.png'
@@ -33,7 +33,7 @@ function Profile({ infor }) {
                         <div className={cx('containerbutton')}>
                             <div className={cx('container-img')}>
 
-                                {k? <img src={`http://localhost:4000/${infor.avatar}`} />:<img src={avt} />}
+                                {k? <img src={`http://localhost:4000/${infor.avatar}`}alt='avt' />:<img src={avt} alt='avt' />}
                             </div>
                             <p >{infor.name}</p>
                         </div>
@@ -105,7 +105,7 @@ function Profile({ infor }) {
         >
 
             <div className={cx('container-img')}>
-                {k? <img src={`http://localhost:4000/${infor.avatar}`} />:<img src={avt} />}
+                {k? <img src={`http://localhost:4000/${infor.avatar}`} alt='avt' />:<img src={avt} alt='avt' />}
             </div>
         </Tippy>
 
