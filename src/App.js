@@ -6,10 +6,12 @@ import Authe from './components/pages/Auth';
 import Notfound from './components/pages/Notfound';
 import Userlayout from './components/layouts/Userlayout';
 import Profileuser from './components/pages/Profileuser';
+import { HashRouter } from 'react-router-dom';
 function App() {
   
   return (
-    <BrowserRouter>
+    <HashRouter>
+    {/* // <BrowserRouter> */}
       <Routes>
           <Route path='/' element={
             <Defaultlayout>
@@ -34,7 +36,8 @@ function App() {
           } />
         <Route path='*' element={<Notfound />} />
       </Routes>
-    </BrowserRouter>
+    {/* </BrowserRouter>  */}
+    </HashRouter>
   );
 }
 
