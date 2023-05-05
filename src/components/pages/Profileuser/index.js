@@ -55,7 +55,6 @@ function Profileuser() {
         })
             .then(res => res.json())
             .then(value => {
-
                 return window.location.reload()
             })
             .catch(err => console.log(err))

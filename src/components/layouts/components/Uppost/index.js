@@ -117,7 +117,7 @@ function Uppost() {
                     <button type="button" onClick={handleClose} className={`btn-close ${cx('btnclose')}`} aria-label="Close"></button>
                 </Modal.Header>
                 <Modal.Body className={cx('body')}>
-                    <form onSubmit={handlesubmit} enctype="multipart/form-data">
+                    <form onSubmit={handlesubmit} encType="multipart/form-data">
                         <div>
                             <Avatar img={infor.avatar} />
                             <span className='ms-3'>{infor.name}</span>
