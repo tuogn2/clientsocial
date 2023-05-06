@@ -35,9 +35,7 @@ function Profileuser() {
         fetch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, {
             method: 'PATCH',
             credentials: 'include',
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            },
+           
             body: formData,
         })
             .then(res => res.json())
