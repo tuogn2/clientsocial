@@ -35,6 +35,9 @@ function Profileuser() {
         fetch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, {
             method: 'PATCH',
             credentials: 'include',
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            },
             body: formData,
         })
             .then(res => res.json())
@@ -68,7 +71,6 @@ function Profileuser() {
             .catch(err => console.log(err))
 
     }, [id])
-    console.log(yourposts)
     return (<>
         <input type='file' onChange={handleravatar} style={{ display: 'none' }} id='addavt' />
         <input type='file' onChange={handlebackground} style={{ display: 'none' }} id='addbackground' />
@@ -115,7 +117,7 @@ function Profileuser() {
             <div className={cx('container-posts')} >
                 <Uppost />
                 <div className='ms-3'>
-                    { yourposts.map((post,index) => {
+                    {yourposts.map((post, index) => {
                         return <Post key={index} post={post} imgs={post.image} />
                     })}
                 </div>

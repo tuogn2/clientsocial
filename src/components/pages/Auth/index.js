@@ -50,7 +50,6 @@ function Authe() {
                 }
             })
                 .then(res => {
-                    console.log(document.cookie)
                     if (res.status === 401) {
                         throw new Error('Unauthorized')
                     }
