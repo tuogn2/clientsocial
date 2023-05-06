@@ -10,7 +10,7 @@ import { faCamera, faHome, faLocationDot } from '@fortawesome/free-solid-svg-ico
 import Uppost from '~/components/layouts/components/Uppost';
 import Post from '~/components/layouts/components/Post';
 
-
+import axios from 'axios';
 
 const cx = className.bind(style)
 function Profileuser() {
@@ -28,21 +28,31 @@ function Profileuser() {
     }, [id])
 
     const handleravatar = (e) => {
+        // const file = e.target.files[0];
+        // file.img = URL.createObjectURL(file)
+        // let formData = new FormData();
+        // formData.append('avatar', file);
+        // // fetch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, {
+        // fetch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, {
+        //     method: 'PATCH',
+        //     credentials: 'include',
+        //     body: formData,
+        // })
+        //     .then(res => res.json())
+        //     .then(value => window.location.reload())
+        //     .catch(err => console.log(err))
+
         const file = e.target.files[0];
-        file.img = URL.createObjectURL(file)
+        file.img = URL.createObjectURL(file);
         let formData = new FormData();
         formData.append('avatar', file);
-        // fetch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, {
-        fetch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, {
-
-            method: 'PATCH',
-            credentials: 'include',
-            body: formData,
-        })
-            .then(res => res.json())
-            .then(value => window.location.reload())
-            .catch(err => console.log(err))
-
+        axios.patch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, formData, {
+            withCredentials: true,
+        }).then(response => {
+            window.location.reload();
+        }).catch(error => {
+            console.log(error);
+        });
     }
 
     const handlebackground = (e) => {
