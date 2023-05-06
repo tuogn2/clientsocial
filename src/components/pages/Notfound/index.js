@@ -1,5 +1,6 @@
 import classname from 'classnames/bind'
 import style from './notfound.module.scss'
+import { Link } from 'react-router-dom';
 const cx = classname.bind(style)
 function Notfound() {
     return (
@@ -14,7 +15,7 @@ function Notfound() {
                     <div className={cx('content_box_404')}>
                         <h3 className="h2">Looks Like You're Lost</h3>
                         <p>The page you are looking for not available</p>
-                        <a href="/login">Go to login</a>
+                        <Link to={`/login`}>Go to login</Link>
                     </div>
                 </div>
             </div>
