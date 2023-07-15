@@ -33,7 +33,7 @@ function Profile({ infor }) {
                         <div className={cx('containerbutton')}>
                             <div className={cx('container-img')}>
 
-                                {k? <img src={`https://social-mgcw.onrender.com/${infor.avatar}`}alt='avt' />:<img src={avt} alt='avt' />}
+                                {k? <img src={`https://newsocial-server.onrender.com/${infor.avatar}`}alt='avt' />:<img src={avt} alt='avt' />}
                             </div>
                             <p >{infor.name}</p>
                         </div>
@@ -105,7 +105,7 @@ function Profile({ infor }) {
         >
 
             <div className={cx('container-img')}>
-                {k? <img src={`https://social-mgcw.onrender.com/${infor.avatar}`} alt='avt' />:<img src={avt} alt='avt' />}
+                {k? <img src={`https://newsocial-server.onrender.com/${infor.avatar}`} alt='avt' />:<img src={avt} alt='avt' />}
             </div>
         </Tippy>
 

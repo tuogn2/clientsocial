@@ -42,7 +42,7 @@ function Homepage() {
 
 
     useEffect(() => {
-        fetch(`https://social-mgcw.onrender.com/post`)
+        fetch(`https://newsocial-server.onrender.com/post`)
             .then(res => res.json())
             .then(value => setposts(value))
             .catch(err => console.log(err))

@@ -11,7 +11,7 @@ function Friendlist() {
     const [users, setusers] = useState([{}])
     let k = 1;
     useEffect(() => {
-        fetch(`https://social-mgcw.onrender.com/users`)
+        fetch(`https://newsocial-server.onrender.com/users`)
             .then(res => res.json())
             .then(userss => setusers(userss)
             )

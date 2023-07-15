@@ -57,7 +57,7 @@ function Createuser() {
         }
 
 
-            fetch(`https://social-mgcw.onrender.com/users`, {
+            fetch(`https://newsocial-server.onrender.com/users`, {
                 method: 'post',
                 credentials: 'include',
                 headers: {

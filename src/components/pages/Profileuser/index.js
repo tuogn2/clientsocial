@@ -21,7 +21,7 @@ function Profileuser() {
     let { id } = useParams();
 
     useEffect(() => {
-        fetch(`https://social-mgcw.onrender.com/users/getmyuser/${id}`)
+        fetch(`https://newsocial-server.onrender.com/users/getmyuser/${id}`)
             .then(res => res.json())
             .then(value => setuser(value))
             .catch(err => console.log(err))
@@ -46,7 +46,7 @@ function Profileuser() {
         file.img = URL.createObjectURL(file);
         let formData = new FormData();
         formData.append('avatar', file);
-        axios.patch(`https://social-mgcw.onrender.com/users/addavatar/${user._id}`, formData, {
+        axios.patch(`https://newsocial-server.onrender.com/users/addavatar/${user._id}`, formData, {
             withCredentials: true,
         }).then(response => {
             window.location.reload();
@@ -60,7 +60,7 @@ function Profileuser() {
         file.img = URL.createObjectURL(file)
         let formData = new FormData();
         formData.append('backgorund', file);
-        fetch(`https://social-mgcw.onrender.com/users/addback/${user._id}`, {
+        fetch(`https://newsocial-server.onrender.com/users/addback/${user._id}`, {
             method: 'PATCH',
             credentials: 'include',
             body: formData,
@@ -74,7 +74,7 @@ function Profileuser() {
     }
 
     useEffect(() => {
-        fetch(`https://social-mgcw.onrender.com/post/${id}`)
+        fetch(`https://newsocial-server.onrender.com/post/${id}`)
             .then(res => res.json())
             .then(value => setyourposts(value))
             .catch(err => console.log(err))
@@ -85,7 +85,7 @@ function Profileuser() {
         <input type='file' onChange={handlebackground} style={{ display: 'none' }} id='addbackground' />
         <div className={cx('container-profike')} >
             <div className={cx('wrap-backround')} >
-                {user.backgorund ? <img className={cx('background')} alt='background' src={`https://social-mgcw.onrender.com/${user.backgorund}`} />
+                {user.backgorund ? <img className={cx('background')} alt='background' src={`https://newsocial-server.onrender.com/${user.backgorund}`} />
                     : <img className={cx('background')} alt='background' src={backgroun} />}
                 <div>
                     <label htmlFor='addbackground' className={cx('changbackgoround')}><p>Backgorund</p></label>

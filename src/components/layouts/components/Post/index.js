@@ -20,7 +20,7 @@ function Post({ post, imgs }) {
 
     const [myaccount, setmyaccount] = useState({})
     useEffect(() => {
-        fetch(`https://social-mgcw.onrender.com/users/getmyuser/${localStorage.getItem('id')}`)
+        fetch(`https://newsocial-server.onrender.com/users/getmyuser/${localStorage.getItem('id')}`)
             .then(res => res.json())
             .then(value => setmyaccount(value))
             .catch(err => console.log(err))
@@ -35,7 +35,7 @@ function Post({ post, imgs }) {
     }
     const [countliked, setcountliked] = useState(soluotlike)
     useEffect(() => {
-        fetch(`https://social-mgcw.onrender.com/users/getmyuser/${post.user}`)
+        fetch(`https://newsocial-server.onrender.com/users/getmyuser/${post.user}`)
             .then(res => res.json())
             .then(value => {
                 return setuserinfor(value)
@@ -45,7 +45,7 @@ function Post({ post, imgs }) {
 
     useEffect(() => {
         if (remove) {
-            fetch(`https://social-mgcw.onrender.com/post/deletepost`, {
+            fetch(`https://newsocial-server.onrender.com/post/deletepost`, {
                 method: 'delete',
                 credentials: 'include',
                 headers: {
@@ -84,7 +84,7 @@ function Post({ post, imgs }) {
 
     const handlesubmitcmtform = (e) => {
         e.preventDefault()
-        fetch(`https://social-mgcw.onrender.com/post/comment`, {
+        fetch(`https://newsocial-server.onrender.com/post/comment`, {
             method: 'post',
             credentials: 'include',
             headers: {
@@ -108,7 +108,7 @@ function Post({ post, imgs }) {
     }
     const handlerlike = () => {
         if (liked === false) {
-            fetch(`https://social-mgcw.onrender.com/post/like`, {
+            fetch(`https://newsocial-server.onrender.com/post/like`, {
                 method: 'post',
                 credentials: 'include',
                 headers: {
@@ -131,7 +131,7 @@ function Post({ post, imgs }) {
         }
 
         if (liked === true) {
-            fetch(`https://social-mgcw.onrender.com/post/dislike`, {
+            fetch(`https://newsocial-server.onrender.com/post/dislike`, {
                 method: 'post',
                 credentials: 'include',
                 headers: {
@@ -206,7 +206,7 @@ function Post({ post, imgs }) {
             </div>
             <div className={cx('wrap-image')}>
                 {imgs && imgs.map((img, index) => {
-                    return <img className='col-12' alt='anh' key={index} src={`https://social-mgcw.onrender.com/${img}`} />
+                    return <img className='col-12' alt='anh' key={index} src={`https://newsocial-server.onrender.com/${img}`} />
                 })}
             </div>
             <div className={cx('likecount')}>

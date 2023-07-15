@@ -17,7 +17,7 @@ function Avatar({img,sizesm,sizebig}) {
         // setavatar(false)
         return <img  className={classes} alt='avt ' src={avt}/>;
     }
-    return <img className={classes} alt='avt ' src={`https://social-mgcw.onrender.com/${img}`}/>
+    return <img className={classes} alt='avt ' src={`https://newsocial-server.onrender.com/${img}`}/>
     
 }
 

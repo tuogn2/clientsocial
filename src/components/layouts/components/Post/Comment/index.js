@@ -10,7 +10,7 @@ const cx = classname.bind(style)
 function Comment({ cmt }) {
    const [user,setuser]= useState({});
    useEffect(()=>{
-        fetch(`https://social-mgcw.onrender.com/users/getmyuser/${cmt.user}`)
+        fetch(`https://newsocial-server.onrender.com/users/getmyuser/${cmt.user}`)
         .then(res=>res.json())
         .then(value => setuser(value))
         .catch(err=>console.log(err))

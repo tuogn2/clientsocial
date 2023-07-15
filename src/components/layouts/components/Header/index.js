@@ -16,7 +16,7 @@ function Header() {
     const [chechligin, setchecklogin] = useState(true)
 
     useEffect(() => {
-        fetch(`https://social-mgcw.onrender.com/users/getmyuser/${localStorage.id}`)
+        fetch(`https://newsocial-server.onrender.com/users/getmyuser/${localStorage.id}`)
             .then(res => res.json())
             .then(user => {
                 if (user.email) {
